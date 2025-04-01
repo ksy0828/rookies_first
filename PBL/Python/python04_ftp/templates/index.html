@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>파일 목록</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <h1>{{hostname}} 파일 목록</h1>
+    <table border="1">
+        <tr>
+            <th>파일 이름</th>
+            <th>파일 크기</th>
+            <th>파일 날짜</th>
+            <th>파일 경로</th>
+        </tr>
+        {% for file in files %}
+        <tr>
+            <td>{{ file.name }}</td>
+            <td>{{ file.size }}</td>
+            <td>{{ file.date }}</td>
+            <td>{{ file.path }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
