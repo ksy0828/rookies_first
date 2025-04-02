@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 페이지</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}">
+</head>
+<body>
+    <h1>LOGIN</h1>
+    <form method="post" action="{{ url_for('index') }}">
+        <table>
+            <tr>
+                <td><input required type="text" placeholder="Host name (IP)" name="HostIP"><br></td>
+            </tr>
+            <tr>
+                <td><input required type="text" placeholder="User ID" name="UserID"><br></td>
+            </tr>
+            <tr>
+                <td><input required type="password" placeholder="Password" name="UserPW"><br></td>
+            </tr>
+            <tr>
+                <td><button type="submit">LOGIN</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
